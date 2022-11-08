@@ -117,3 +117,43 @@ użytkownik ma możliwość wpisania polecenia do kalkulatora co chce zrobić i 
 chce to zrobić nim podejmie działanie :)
 
 '''
+
+
+def procent(x, y):
+    wynik = x * (y / 100)
+    return print(wynik)
+
+
+'''
+tak powinno wyglądać właściwe wywołanie każdej jednej funkcji
+
+procent(x,y)
+
+'''
+
+'''
+to co zrobiłeś u siebie niestety nie zadziała, ale return może przyjąć taki wynik
+
+na plus to mega zrobiony index wyboru, jeszcze można tam jakieś info dorzucić dla usera =)
+struktura elifowa jest ok jak najbardziej, ale funkcje powinny przyjmować parametry tak jak powyżej
+
+czyli w nawiasie ale po przecinku i w funkcji jest samo działanie. 
+
+tego x i y można też wrzucić do funkcji func1 i wtedy nie będzie się gryzło z wrzuceniem ich do wywoławek
+
+def func1():
+    while True:
+        x = int(input("Podaj liczbę"))
+        y = int(input("Podaj liczbę"))
+        index = str(input("jakie działanie chcesz wykonać"))
+        if index.upper() == 'MNOŻENIE':
+            mnozenie(x,y)
+        elif    
+            ... itd :)
+
+
+bo wtedy wywołanie tego będzie ciągłe (bo mamy while a w nim są x i y) i będziesz mógł stale operować na tym kalkulatorze
+jak przyjmiesz powyższą strukturę, a wywołanie tego poniżej poniżej. =)
+
+func1()
+'''
