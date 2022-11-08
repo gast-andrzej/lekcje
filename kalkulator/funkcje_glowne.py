@@ -1,3 +1,7 @@
+from funkcje_skladowe import dodawanie
+from funkcje_skladowe import odejmowanie
+from funkcje_skladowe import mnozenie
+from funkcje_skladowe import dzielenie
 
 
 
@@ -14,6 +18,7 @@ def kalkulator_exe():
         if pytajnik.upper() == "Y":
             if index == 1:
                 dodawanie(x, y)
+                #tutaj np. miejsce na historie :) w tej linijce
                 matcher = matcher - 1
             elif index == 2:
                 odejmowanie(x, y)

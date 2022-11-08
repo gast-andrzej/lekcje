@@ -2,112 +2,124 @@
 Listy, tuple, pętla for, zakresy
 '''
 
+lista1 = [1,2,3,7,5,3,2] # typy w liście to int
+lista2 = ['h','e','l', "HELLO",1,'looooo World'] # typy w liście to string
+lista3 = [1,2,3,'hello','world'] # brak określonego typu danych
+
+print(len(lista1))
+
+lista1.append('hello')
+
+# print(lista1.pop())
+print(lista1[len(lista1)-1])
+
+# len liczy dane w taki sposób elem1, elem2, elem3
+# to dla niego 1,2,3 czyli razem 3
+# natomiast pierwszy element listy to 0
+# czyli lista złożona z elem1, elem2, elem3 -> jej ostatni element to 2
+# bo lista zaczyna liczyć od zera 0, 1, 2 :)
+# obejściem tego problemu jest -1 :D print(lista1[len(lista1)-1])
+
+print(len(lista1)) #dane które udostępnia len to postać INT
+
+print(lista1[::-1]) #kod do obrócenia listy :)
+
+
 '''
-Praca Domowa
+typy danych takie jak stos - LIFO
+
+elem1, elem2, elem3
+
+od ostatniego elementu są wyciągane
+
+
+First In First Out - ZASADA FIFO
+
+elem1, elem2, elem3
+
+pierwsze weszło, pierwsze wyszło
+
+
+First In Last Out - FILO
+żeby zapobiec wyciekowi danych
 '''
 
 '''
-1
-napisz kolejne funkcje dla kalkulatora w tym funkcje procent i liczenie obwodu prostokąta i kwadratu
-
-2
-Użytkownik ma mieć możliwość wyboru tylko 10 razy danej funkcji kalkulatora, później ten automatycznie
-się zamyka, oczywiście wcześniej sam może go zamknąć
-
-3
-użytkownik ma możliwość wpisania polecenia do kalkulatora co chce zrobić i kalkulator zapyta go czy na pewno
-chce to zrobić nim podejmie działanie :)
-
+DZIAŁANIA Z LISTAMI STR
 '''
-'''
-def dodawanie(x,y):
-    return print(x+y)
 
-def odejmowanie(x,y):
-    return print(x-y)
+print(lista2)
+# zamień listę na napis h e l lo World
 
-def mnozenie(x,y):
-    return print(x*y)
+lista2.pop()
+lista2.append("lo World")
+print(lista2)
+listaduze = []
+listamale = []
+listarozne = []
+lista_z = []
+lista_int = []
+lista2 = ['h','e',7, 15, 'l', "HELLO",1,'looooo World', 11,] # typy w liście to string
 
-def dzielenie(x,y):
-    return print(x/y)
+for i in lista2:
+    lista_z.append(str(i))
 
-
-
-
-def kalkulator():
-    matcher = 9
-    while matcher >= 0:
-        x = int(input("pierwsza liczba "))
-        y = int(input("druga liczba "))
-        index = int(input("1 dodawanie, 2 odejmowanie, 3 mnożenie, 4 dzielenie, other value = exit"))
-                # to tutaj jest encoding CP1250 lub latin2, natomiast nie UTF-8, jak już UTF-16
-        pytajnik = str(input("You want that? [Y][N]"))
-        if pytajnik.upper() == "Y":
-            if index == 1:
-                dodawanie(x,y)
-                matcher = matcher - 1
-            elif index == 2:
-                odejmowanie(x,y)
-                matcher = matcher - 1
-            elif index == 3:
-                mnozenie(x,y)
-                matcher = matcher - 1
-            elif index == 4:
-                dzielenie(x,y)
-                matcher = matcher - 1
-            else:
-                break
+for elem in lista_z:
+    '''
+    sam w sobie element to zapis z tablicy ASCII
+    01 a == A
+    a == a
+        wykonaj :)
+    '''
+    try:
+        int(elem)
+        lista_int.append(elem)
+    except:
+        if elem == elem.upper():
+            listaduze.append(elem)
+        if elem == elem.lower():
+            listamale.append(elem)
         else:
-            pass
+            listarozne.append(elem)
 
-kalkulator()
+# print(''.join(lista_z))
+# print(lista_int)
+# print(listaduze)
+# print(listamale)
+# print(listarozne)
+
+dodaj = []
+for elem in lista_int:
+    dodaj.append(int(elem))
+
+print(dodaj)
+print(sum(dodaj))
+
+def func_two_lastone(x):
+    z = []
+    z.append(x.pop())
+    z.append(x.pop())
+    return print(sum(z))
+
+func_two_lastone(dodaj)
+
 
 '''
+ZADANIE DOMOWE
 
-def dodawanie(x,y):
-    return print(x+y)
+1. Napisz 3 funkcje wykorzystujące pętle for i listy (w dowolny sposób).
 
-def odejmowanie(x,y):
-    return print(x-y)
+2. Napisz 3 funkcje wyciągające ostatnie elementy z różnych list i sumujące je ze sobą, lub dodające, lub mnożące (dwie różne listy wystarczą)
 
-def mnozenie(x,y):
-    return print(x*y)
+3. Dodaj do kalkulatora "Historię działań (samych ich nazw)" magazynowanych w listach :) z możliwością wyświetlenia
+    po wpisaniu komendy liczbowej lub słownej (dowolnie wybór).
 
-def dzielenie(x,y):
-    return print(x/y)
+4. Spróbuj pobawić się try i except tak jak w powyższym kodzie (pamiętaj o strukturze)
+    try:
+        coś co jest poddane w próbę
+        coś co dzieje się po zdanym teście powyżej :)
+    except:
+        coś co dzieje się w przypadku niezdanego testu :)
+        (może być pass)
 
-
-
-
-def kalkulator():
-    matcher = 9
-    while matcher >= 0:
-        x = int(input("pierwsza liczba "))
-        y = int(input("druga liczba "))
-        index = int(input("1 dodawanie, 2 odejmowanie, 3 mnożenie, 4 dzielenie, other value = exit"))
-                # to tutaj jest encoding CP1250 lub latin2, natomiast nie UTF-8, jak już UTF-16
-        pytajnik = str(input("You want that? [Y][N]"))
-        if pytajnik.upper() == "Y":
-            if index == 1:
-                dodawanie(x,y)
-                matcher = matcher - 1
-            elif index == 2:
-                odejmowanie(x,y)
-                matcher = matcher - 1
-            elif index == 3:
-                mnozenie(x,y)
-                matcher = matcher - 1
-            elif index == 4:
-                dzielenie(x,y)
-                matcher = matcher - 1
-            else:
-                break
-        else:
-            pass
-
-kalkulator()
-
-
-
-
+'''
