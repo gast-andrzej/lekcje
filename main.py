@@ -56,16 +56,18 @@ Odpowiedź ma być zwracana pełnym zdaniem :)
 #
 #
 #
-
-
-
-
-
-
-
-
-
-
+#
+# from LEK6 import func_while as FW
+#
+#
+#
+# if __name__ == "__main__":
+#     FW()
+#
+#
+#
+#
+#
 
 
 

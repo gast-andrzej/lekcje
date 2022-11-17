@@ -4,7 +4,7 @@ from funkcje_skladowe import mnozenie
 from funkcje_skladowe import dzielenie
 
 
-
+x = 5515
 
 
 def kalkulator_exe():
