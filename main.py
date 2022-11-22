@@ -68,8 +68,3 @@ Odpowiedź ma być zwracana pełnym zdaniem :)
 #
 #
 #
-
-
-
-
-
