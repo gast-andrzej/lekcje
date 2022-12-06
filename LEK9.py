@@ -236,3 +236,4 @@ podrasuj istniejące funkcje o zliczanie wyrzuconych wyjątków ValueError
 
 
 '''
+
