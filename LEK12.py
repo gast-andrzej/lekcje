@@ -102,7 +102,7 @@ ZADANKA :)
 #     return print(_suma_kontrolna)
 #
 # _randomizer()
-
+import string
 
 '''
 ZADANKA
@@ -168,4 +168,6 @@ def func4():
         print("No")
 
 
-func4()
+# func4()
+
+
