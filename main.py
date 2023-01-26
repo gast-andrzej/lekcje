@@ -68,3 +68,12 @@ Odpowiedź ma być zwracana pełnym zdaniem :)
 #
 #
 #
+
+
+from LEKGR import Jan
+from LEKGR import Adam
+
+
+
+Jan.email_podaj()
+Adam.email_podaj()
