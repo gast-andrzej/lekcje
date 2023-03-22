@@ -149,3 +149,6 @@ wyższy od 18
 zaprojektuj i napisz funkcje która sumuje elementy liczbowe w liście i podaje ich najmniejszy wspólny parzysty dzielnik
 wyższy od 34
 '''
+
+
+
